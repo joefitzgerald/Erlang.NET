@@ -18,22 +18,34 @@
  * %CopyrightEnd%
  */
 
+using System;
+
 namespace Erlang.NET
 {
-    /**
-     * Exception raised when an attempt is made to create an Erlang term by decoding
-     * a sequence of bytes that does not represent the type of term that was
-     * requested.
-     * 
-     * @see OtpInputStream
-     */
+    /// <summary>
+    /// Exception raised when an attempt is made to create an Erlang term by decoding
+    /// a sequence of bytes that does not represent the type of term that was
+    /// requested.
+    /// </summary>
+    /// <remarks></remarks>
     public class OtpErlangDecodeException : OtpErlangException
     {
-        /**
-         * Provides a detailed message.
-         */
-        public OtpErlangDecodeException(string msg)
-            : base(msg)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpErlangDecodeException"/> class.
+        /// </summary>
+        /// <param name="msg">The MSG.</param>
+        /// <remarks></remarks>
+        public OtpErlangDecodeException(string msg) : base(msg)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpErlangDecodeException"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="cause">The cause.</param>
+        /// <remarks></remarks>
+        public OtpErlangDecodeException(string message, Exception cause) : base(message, cause)
         {
         }
     }

@@ -21,24 +21,38 @@ using System;
 
 namespace Erlang.NET
 {
-    /**
-     * Base class for the other OTP exception classes.
-     */
+    /// <summary>
+    /// Base class for the other OTP exception classes.
+    /// </summary>
+    /// <remarks></remarks>
     public abstract class OtpException : Exception
     {
-        /**
-         * Provides no message.
-         */
-        public OtpException()
-            : base()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:System.Object"/> class.
+        /// </summary>
+        /// Provides no message.
+        /// <remarks></remarks>
+        public OtpException() : base()
         {
         }
 
-        /**
-         * Provides a detailed message.
-         */
-        public OtpException(string msg)
-            : base(msg)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpException"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// Provides a detailed message.
+        /// <remarks></remarks>
+        public OtpException(string message) : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpException"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="cause">The cause.</param>
+        /// <remarks></remarks>
+        public OtpException(string message, Exception cause) : base(message, cause)
         {
         }
     }

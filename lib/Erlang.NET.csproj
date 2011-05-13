@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C95E473-0BDE-4432-9B9D-DC6104C68BB9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Erlang</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>
+    </AppDesignerFolder>
+    <RootNamespace>Erlang.NET</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;WIN32</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>False</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>False</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>..\bin\Erlang.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>True</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>False</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Erlang.NET.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\misc\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AbstractNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BufferedTcpClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Link.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Links.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpActor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpActorMbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpActorSched.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpAuthException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpCookedConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpEpmd.Client.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpEpmd.Server.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangAtom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangBinary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangBitstr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangByte.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangChar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangDecodeException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangDouble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangExit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangExternalFun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangFloat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangFun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangLong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangPid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangRangeException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangRef.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangShort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangTuple.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangUInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpErlangUShort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpExternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpLocalNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpMbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpMD5.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpNodeStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpOutputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpPeer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpSelf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtpServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreadBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BigInteger\BigInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Erlang.NET.snk">
+      <Link>Erlang.NET.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

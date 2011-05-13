@@ -18,6 +18,8 @@
  * %CopyrightEnd%
  */
 
+using System;
+
 namespace Erlang.NET
 {
     /**
@@ -38,8 +40,11 @@ namespace Erlang.NET
         /**
          * Provides a detailed message.
          */
-        public OtpErlangException(string msg)
-            : base(msg)
+        public OtpErlangException(string msg) : base(msg)
+        {
+        }
+
+        public OtpErlangException(string message, Exception cause) : base(message, cause)
         {
         }
     }

@@ -40,8 +40,7 @@ namespace Erlang.NET
         /**
          * Provides a detailed message.
          */
-        public OtpErlangRangeException(String msg)
-            : base(msg)
+        public OtpErlangRangeException(String msg) : base(msg)
         {
         }
     }

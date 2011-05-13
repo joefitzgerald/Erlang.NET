@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+		<id>Erlang.NET</id>
+		<title>Erlang.NET</title>
+		<projectUrl>https://github.com/takayuki/Erlang.NET</projectUrl>
+		<licenseUrl>https://github.com/takayuki/Erlang.NET/blob/master/EPLICENSE</licenseUrl>
+		<version>0.9.5</version>
+		<authors>Takayuki Usui, Joe Fitzgerald</authors>
+		<description>Erlang.NET is an implementation of an Erlang node in C# which was manually translated and ported from the counterpart in Java, jinterface.</description>
+		<summary>Erlang.NET is an implementation of an Erlang node in C# which was manually translated and ported from the counterpart in Java, jinterface.</summary>
+		<language>en-US</language>
+		<dependencies>
+			<dependency id="log4net" version="1.2.10" />
+		</dependencies>
+	</metadata>
+		<files>
+			<file src="..\bin\Erlang.dll" target="lib" />
+			<file src="..\bin\Erlang.pdb" target="lib" />
+			<file src="..\bin\Erlang.xml" target="lib" />
+		</files>
+</package>

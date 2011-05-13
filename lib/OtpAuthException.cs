@@ -1,3 +1,4 @@
+
 /*
  * %CopyrightBegin%
  * 
@@ -21,22 +22,35 @@ using System;
 
 namespace Erlang.NET
 {
-    /**
-     * Exception raised when a node attempts to establish a communication channel
-     * when it is not authorized to do so, or when a node sends a message containing
-     * an invalid cookie on an established channel.
-     * 
-     * @see OtpConnection
-     */
+    /// <summary>
+    /// Exception raised when a node attempts to establish a communication channel
+    /// when it is not authorized to do so, or when a node sends a message containing
+    /// an invalid cookie on an established channel.
+    /// </summary>
+    /// <remarks></remarks>
     public class OtpAuthException : OtpException
     {
+        /// <summary>
+        /// The serial version unique identifier.
+        /// </summary>
         internal static readonly long serialVersionUID = 1L;
 
-        /**
-         * Provides a detailed message.
-         */
-        public OtpAuthException(String s)
-            : base(s)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpAuthException"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <remarks></remarks>
+        public OtpAuthException(string message) : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OtpAuthException"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="cause">The cause.</param>
+        /// <remarks></remarks>
+        public OtpAuthException(string message, Exception cause) : base(message, cause)
         {
         }
     }
