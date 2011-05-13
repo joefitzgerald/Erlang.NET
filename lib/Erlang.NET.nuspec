@@ -14,9 +14,4 @@
 			<dependency id="log4net" version="1.2.10" />
 		</dependencies>
 	</metadata>
-		<files>
-			<file src="..\bin\Erlang.dll" target="lib" />
-			<file src="..\bin\Erlang.pdb" target="lib" />
-			<file src="..\bin\Erlang.xml" target="lib" />
-		</files>
 </package>
